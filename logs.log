@@ -1,0 +1,169 @@
+2025-06-09 20:03:42,615 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Your task is to provide the exact titles of up to five of the most relevant Wikipedia pages based on the topic provided below. The titles should be unique, correspond to valid Wikipedia pages, and be separated by a newline. Replace any whitespaces in the titles with underscores. If you can't find five relevant articles, return only the ones you find to be most pertinent. If no articles are highly relevant, just respond with a newline. Here is the topic: <What Is Photosynthesis> Your response should not contain angle brackets around it. For example, if the title of a wikipedia page is Cars, your response should be Cars, not <Cars>"
+                        }]
+                    }]
+                    }
+                    
+2025-06-09 20:03:43,211 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': 'Photosynthesis\nPhotosynthetic_organism\nChloroplast\nLight-dependent_reactions\nCalvin_cycle\n'}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.05739437966119675}], 'usageMetadata': {'promptTokenCount': 132, 'candidatesTokenCount': 21, 'totalTokenCount': 153, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 132}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 21}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'gZJHaJfEBKitmecPxbaqqQI'}
+2025-06-09 20:03:43,716 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Photosynthesis&explaintext=1&exsectionformat=wiki
+2025-06-09 20:03:43,917 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Photosynthetic_pigment&explaintext=1&exsectionformat=wiki
+2025-06-09 20:03:44,072 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Chloroplast&explaintext=1&exsectionformat=wiki
+2025-06-09 20:03:44,357 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Light-dependent_reactions&explaintext=1&exsectionformat=wiki
+2025-06-09 20:03:44,523 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Calvin_cycle&explaintext=1&exsectionformat=wiki
+2025-06-09 20:03:45,311 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Here is some context to help you answer this question. Use information and ideas from this context in your final answer. The context will be delimited by square brackets, and the question will be delimited by angle brackets. Your answer should not be delimited. If the question seems nonsensical, ignore the context and do not mention it in your response. Furthermore, do not mention any bracketed text nor provided text in your response. Do not make any mention at all to the context provided, and ignore it if the user input is nonsensical. Ignore the context if the user input does not make sense. If the user input does not make sense do not mention the context in your response, and pretend it never existed. 
+ <What Is Photosynthesis> 
+ [Photosynthesis ( FOH-t\u0259-SINTH-\u0259-sis) is a system of biological processes by which photosynthetic organisms, such as most plants, algae, and cyanobacteria, convert light energy, typically from sunlight, into the chemical energy necessary to fuel their metabolism. 
+Photosynthesis usually refers to oxygenic photosynthesis, a process that produces oxygen. Photosynthetic organisms store the chemical energy so produced within intracellular organic compounds (compounds containing carbon) like sugars, glycogen, cellulose and starches. To use this stored chemical energy, an organism's cells metabolize the organic compounds through cellular respiration. Photosynthesis plays a critical role in producing and maintaining the oxygen content of the Earth's atmosphere, and it supplies most of the biological energy necessary for complex life on Earth.
+=== Water photolysis ===
+== Photosynthetic membranes and organelles ==
+=== Cyanobacteria and the evolution of photosynthesis ===
+Water photolysis]"
+                        }]
+                    }]
+                    }
+                    
+2025-06-09 20:03:46,287 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': "Photosynthesis is the process by which organisms convert light energy into chemical energy.  This process is used by plants, algae, and some bacteria to create sugars, which serve as food.  Oxygen is a byproduct of this process in most cases.  The chemical energy stored in sugars is later released through cellular respiration to fuel the organism's activities.  Photosynthesis is fundamental to life on Earth, providing both food and oxygen.\n"}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.31706860421717853}], 'usageMetadata': {'promptTokenCount': 340, 'candidatesTokenCount': 87, 'totalTokenCount': 427, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 340}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 87}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'g5JHaPj9Lde3ld8P4eu1uAY'}
+2025-06-09 20:06:17,408 | INFO | __init__.py | __init__ | Wikipedia: language=en, user_agent: MyPythonScript/1.0 (Wikipedia-API/0.8.1; https://github.com/martin-majlis/Wikipedia-API/), extract_format=1
+2025-06-28 21:11:59,283 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Your task is to provide the exact titles of up to five of the most relevant Wikipedia pages based on the topic provided below. The titles should be unique, correspond to valid Wikipedia pages, and be separated by a newline. Replace any whitespaces in the titles with underscores. If you can't find five relevant articles, return only the ones you find to be most pertinent. If no articles are highly relevant, just respond with a newline. Here is the topic: <How To Deal With Teenagers> Your response should not contain angle brackets around it. For example, if the title of a wikipedia page is Cars, your response should be Cars, not <Cars>"
+                        }]
+                    }]
+                    }
+                    
+2025-06-28 21:11:59,983 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': 'Teenage_development\nAdolescence\nParenting_teenagers\nParent–child_relationship\nDiscipline\n'}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.260085391998291}], 'usageMetadata': {'promptTokenCount': 134, 'candidatesTokenCount': 20, 'totalTokenCount': 154, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 134}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 20}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': '_65gaLvpKa3qld8PtbK3-A8'}
+2025-06-28 21:12:00,479 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Parenting_teenagers&explaintext=1&exsectionformat=wiki
+2025-06-28 21:12:01,207 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Teenage_development&explaintext=1&exsectionformat=wiki
+2025-06-28 21:12:01,357 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Adolescence&explaintext=1&exsectionformat=wiki
+2025-06-28 21:12:01,690 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Parenting&explaintext=1&exsectionformat=wiki
+2025-06-28 21:12:01,938 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Conflict_resolution&explaintext=1&exsectionformat=wiki
+2025-06-28 21:13:37,397 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Here is some context to help you answer this question. Use information and ideas from this context in your final answer. The context will be delimited by square brackets, and the question will be delimited by angle brackets. Your answer should not be delimited. If the question seems nonsensical, ignore the context and do not mention it in your response. Furthermore, do not mention any bracketed text nor provided text in your response. Do not make any mention at all to the context provided, and ignore it if the user input is nonsensical. Ignore the context if the user input does not make sense. If the user input does not make sense do not mention the context in your response, and pretend it never existed. 
+ <How To Deal With Teenagers> 
+ [teens, who find it easier to interact socially online.
+Adolescents
+Parents often feel isolated and alone when parenting adolescents. Adolescence can be a time of high risk for children, where newfound freedoms can result in decisions that drastically open up or close off life opportunities. There are also large changes that occur in the brain during adolescence; the emotional center of the brain is now fully developed, but the rational frontal cortex has not matured fully and still is not able to keep all of those emotions in check. Adolescents tend to increase the amount of time spent with peers of the opposite gender; however, they still maintain the amount of time spent with those of the same gender—and do this by decreasing the amount of time spent with their parents.
+Fifteen years old
+Typically argumentative and unwilling to share their problems with others
+May want to be independent and free of their family
+Typically gets along better with siblings than parents
+Friendships are highly important
+Romantic interests are common.
+In some jurisdictions, many teenagers at this age are starting to drive with a learner's permit, allowing them to drive with someone else in the car.yes
+
+Sixteen years old
+Boys typically begin to grow thick facial hair
+Good overall relationship with family
+Begins to see parents as human beings instead of authority figures
+Friendships highly important, may have a wide circle of friends of both sexes
+Many teenagers at this age are starting to drive on their own.
+Many teenagers at this age get their first jobs.
+
+Seventeen years old
+Most teens have reached sexual maturity
+Sexual intercourse is more common
+Romantic interests are more common
+Love interests can be intense
+During adolescence children begin to form their identity and start to test and develop the interpersonal and occupational roles that they will assume as adults. Therefore, it is important that parents treat them as young adults. Parental issues at this stage of parenting include dealing with rebelliousness related to a greater desire to partake in risky behaviors. In order to prevent risky behaviors, it is important for the parents to build a trusting relationship with their children. This can be achieved through behavioral control, parental monitoring, consistent discipline, parental warmth and support, inductive reasoning, and strong parent-child communication.
+In Britain, teenagers first came to public attention during the Second World War, when there were fears of juvenile delinquency. By the 1950s, the media presented teenagers in terms of generational rebellion. The exaggerated moral panic among politicians and the older generation was typically belied by the growth in intergenerational cooperation between parents and children. Many working-class parents, enjoying newfound economic security, eagerly took the opportunity to encourage their teens to enjoy more adventurous lives. Schools were falsely portrayed as dangerous blackboard jungles under the control of rowdy kids. The media distortions of the teens as too affluent, and as promiscuous, delinquent, counter-cultural rebels do not reflect the actual experiences of ordinary young adults, particularly young women.]"
+                        }]
+                    }]
+                    }
+                    
+2025-06-28 21:13:38,597 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': "Maintain open communication, build trust, and offer consistent support and guidance while respecting their growing independence.  Set clear boundaries and expectations, using reasoning and understanding rather than solely relying on authority.  Acknowledge their feelings and perspectives, even if you don't agree with their choices. Encourage healthy relationships with peers and offer opportunities for them to explore their interests and develop their identities.  Remember that this is a time of significant change and development, and a supportive and understanding approach will be key to navigating this period effectively.\n"}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.3628157087900106}], 'usageMetadata': {'promptTokenCount': 750, 'candidatesTokenCount': 103, 'totalTokenCount': 853, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 750}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 103}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'Ya9gaLKJLITO698PnITT8Ak'}
+2025-06-28 21:15:07,324 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Your task is to provide the exact titles of up to five of the most relevant Wikipedia pages based on the topic provided below. The titles should be unique, correspond to valid Wikipedia pages, and be separated by a newline. Replace any whitespaces in the titles with underscores. If you can't find five relevant articles, return only the ones you find to be most pertinent. If no articles are highly relevant, just respond with a newline. Here is the topic: <How To Deal With Teenagers?> Your response should not contain angle brackets around it. For example, if the title of a wikipedia page is Cars, your response should be Cars, not <Cars>"
+                        }]
+                    }]
+                    }
+                    
+2025-06-28 21:15:07,876 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': 'Teenage_years\nAdolescence\nParenting\nParenting_teenagers\nChild_development\n'}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.17693952719370523}], 'usageMetadata': {'promptTokenCount': 134, 'candidatesTokenCount': 18, 'totalTokenCount': 152, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 134}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 18}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'u69gaK3IKtecnvgP_sbC0Qo'}
+2025-06-28 21:15:08,485 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Teenage_years&explaintext=1&exsectionformat=wiki
+2025-06-28 21:15:09,244 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Adolescence&explaintext=1&exsectionformat=wiki
+2025-06-28 21:15:09,582 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Parenting&explaintext=1&exsectionformat=wiki
+2025-06-28 21:15:09,838 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Teenager&explaintext=1&exsectionformat=wiki
+2025-06-28 21:15:10,073 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Child_development&explaintext=1&exsectionformat=wiki
+2025-06-28 21:15:11,935 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Here is some context to help you answer this question. Use information and ideas from this context in your final answer. The context will be delimited by square brackets, and the question will be delimited by angle brackets. Your answer should not be delimited. If the question seems nonsensical, ignore the context and do not mention it in your response. Furthermore, do not mention any bracketed text nor provided text in your response. Do not make any mention at all to the context provided, and ignore it if the user input is nonsensical. Ignore the context if the user input does not make sense. If the user input does not make sense do not mention the context in your response, and pretend it never existed. 
+ <How To Deal With Teenagers?> 
+ [Adolescents
+Parents often feel isolated and alone when parenting adolescents. Adolescence can be a time of high risk for children, where newfound freedoms can result in decisions that drastically open up or close off life opportunities. There are also large changes that occur in the brain during adolescence; the emotional center of the brain is now fully developed, but the rational frontal cortex has not matured fully and still is not able to keep all of those emotions in check. Adolescents tend to increase the amount of time spent with peers of the opposite gender; however, they still maintain the amount of time spent with those of the same gender—and do this by decreasing the amount of time spent with their parents.
+Fifteen years old
+Typically argumentative and unwilling to share their problems with others
+May want to be independent and free of their family
+Typically gets along better with siblings than parents
+Friendships are highly important
+Romantic interests are common.
+In some jurisdictions, many teenagers at this age are starting to drive with a learner's permit, allowing them to drive with someone else in the car.yes
+
+Sixteen years old
+Boys typically begin to grow thick facial hair
+Good overall relationship with family
+Begins to see parents as human beings instead of authority figures
+Friendships highly important, may have a wide circle of friends of both sexes
+Many teenagers at this age are starting to drive on their own.
+Many teenagers at this age get their first jobs.
+
+Seventeen years old
+Most teens have reached sexual maturity
+Sexual intercourse is more common
+Romantic interests are more common
+Love interests can be intense
+During adolescence children begin to form their identity and start to test and develop the interpersonal and occupational roles that they will assume as adults. Therefore, it is important that parents treat them as young adults. Parental issues at this stage of parenting include dealing with rebelliousness related to a greater desire to partake in risky behaviors. In order to prevent risky behaviors, it is important for the parents to build a trusting relationship with their children. This can be achieved through behavioral control, parental monitoring, consistent discipline, parental warmth and support, inductive reasoning, and strong parent-child communication.
+In Britain, teenagers first came to public attention during the Second World War, when there were fears of juvenile delinquency. By the 1950s, the media presented teenagers in terms of generational rebellion. The exaggerated moral panic among politicians and the older generation was typically belied by the growth in intergenerational cooperation between parents and children. Many working-class parents, enjoying newfound economic security, eagerly took the opportunity to encourage their teens to enjoy more adventurous lives. Schools were falsely portrayed as dangerous blackboard jungles under the control of rowdy kids. The media distortions of the teens as too affluent, and as promiscuous, delinquent, counter-cultural rebels do not reflect the actual experiences of ordinary young adults, particularly young women.
+teens, who find it easier to interact socially online.]"
+                        }]
+                    }]
+                    }
+                    
+2025-06-28 21:15:12,967 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': 'Building a strong, trusting relationship is key.  Maintain open communication, consistent discipline, and offer warmth and support.  Recognize their increasing independence and treat them with respect as young adults, while still providing guidance and setting boundaries.  Understand that their emotional development may outpace their rational thinking, leading to arguments and risky behaviors.  Encourage healthy friendships and activities, and be understanding of their romantic interests.  Remember that their experiences may differ from media portrayals.\n'}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.33173704660066994}], 'usageMetadata': {'promptTokenCount': 750, 'candidatesTokenCount': 93, 'totalTokenCount': 843, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 750}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 93}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'wK9gaNjlEa_-698PtbWhmA0'}
+2025-07-01 12:39:40,281 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Your task is to provide the exact titles of up to five of the most relevant Wikipedia pages based on the topic provided below. The titles should be unique, correspond to valid Wikipedia pages, and be separated by a newline. Replace any whitespaces in the titles with underscores. If you can't find five relevant articles, return only the ones you find to be most pertinent. If no articles are highly relevant, just respond with a newline. Here is the topic: <What Is Photosynthesis?> Your response should not contain angle brackets around it. For example, if the title of a wikipedia page is Cars, your response should be Cars, not <Cars>"
+                        }]
+                    }]
+                    }
+                    
+2025-07-01 12:39:41,358 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': 'Photosynthesis\nChloroplast\nLight-dependent_reactions\nCalvin_cycle\nCarbon_fixation\n'}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.15258379209609257}], 'usageMetadata': {'promptTokenCount': 132, 'candidatesTokenCount': 21, 'totalTokenCount': 153, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 132}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 21}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'bytkaOu-E9efmecP47m_sAE'}
+2025-07-01 12:39:42,176 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Photosynthesis&explaintext=1&exsectionformat=wiki
+2025-07-01 12:39:42,664 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Photosynthetic_pigment&explaintext=1&exsectionformat=wiki
+2025-07-01 12:39:42,819 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Chloroplast&explaintext=1&exsectionformat=wiki
+2025-07-01 12:39:43,096 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Light-dependent_reactions&explaintext=1&exsectionformat=wiki
+2025-07-01 12:39:43,285 | INFO | __init__.py | _query | Request URL: https://en.wikipedia.org/w/api.php?format=json&redirects=1&action=query&prop=extracts&titles=Calvin_cycle&explaintext=1&exsectionformat=wiki
+2025-07-01 12:39:44,797 | INFO | rag.py | get_response | Input JSON: 
+                    {
+                    "contents": [{
+                        "parts": [{
+                        "text": "Here is some context to help you answer this question. Use information and ideas from this context in your final answer. The context will be delimited by square brackets, and the question will be delimited by angle brackets. Your answer should not be delimited. If the question seems nonsensical, ignore the context and do not mention it in your response. Furthermore, do not mention any bracketed text nor provided text in your response. Do not make any mention at all to the context provided, and ignore it if the user input is nonsensical. Ignore the context if the user input does not make sense. If the user input does not make sense do not mention the context in your response, and pretend it never existed. 
+ <What Is Photosynthesis?> 
+ [Photosynthesis ( FOH-t\u0259-SINTH-\u0259-sis) is a system of biological processes by which photosynthetic organisms, such as most plants, algae, and cyanobacteria, convert light energy, typically from sunlight, into the chemical energy necessary to fuel their metabolism. 
+Photosynthesis usually refers to oxygenic photosynthesis, a process that produces oxygen. Photosynthetic organisms store the chemical energy so produced within intracellular organic compounds (compounds containing carbon) like sugars, glycogen, cellulose and starches. To use this stored chemical energy, an organism's cells metabolize the organic compounds through cellular respiration. Photosynthesis plays a critical role in producing and maintaining the oxygen content of the Earth's atmosphere, and it supplies most of the biological energy necessary for complex life on Earth.
+== Photosynthetic membranes and organelles ==
+=== Cyanobacteria and the evolution of photosynthesis ===
+=== Water photolysis ===
+Although there are some differences between oxygenic photosynthesis in plants, algae, and cyanobacteria, the overall process is quite similar in these organisms. There are also many varieties of anoxygenic photosynthesis, used mostly by bacteria, which consume carbon dioxide but do not release oxygen or which produce elemental sulfur instead of molecular oxygen.]"
+                        }]
+                    }]
+                    }
+                    
+2025-07-01 12:39:45,600 | INFO | rag.py | get_response | Output JSON: {'candidates': [{'content': {'parts': [{'text': "Photosynthesis is the process by which organisms convert light energy into chemical energy.  This chemical energy is stored in organic compounds like sugars, which are then used by the organism for its metabolic processes.  It's vital for producing and maintaining oxygen in the Earth's atmosphere and provides the energy for much of Earth's life.\n"}], 'role': 'model'}, 'finishReason': 'STOP', 'avgLogprobs': -0.2351968989652746}], 'usageMetadata': {'promptTokenCount': 399, 'candidatesTokenCount': 68, 'totalTokenCount': 467, 'promptTokensDetails': [{'modality': 'TEXT', 'tokenCount': 399}], 'candidatesTokensDetails': [{'modality': 'TEXT', 'tokenCount': 68}]}, 'modelVersion': 'gemini-1.5-flash', 'responseId': 'cytkaPiEFuernvgP8cuHmQ0'}
