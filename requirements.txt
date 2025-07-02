@@ -1,6 +1,7 @@
-wikipedia-api
-requests
-chromadb
-numpy
-langchain
-python-dotenv
+Wikipedia-API==0.8.1
+requests==2.32.3
+chromadb==1.0.12
+numpy==2.3.0
+langchain-text-splitters==0.3.8
+python-dotenv==1.1.0
+streamlit==1.45.1
