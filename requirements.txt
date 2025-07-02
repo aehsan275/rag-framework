@@ -1,0 +1,6 @@
+wikipedia-api
+requests
+chromadb
+numpy
+langchain
+python-dotenv
